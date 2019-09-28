@@ -19,17 +19,23 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
-
+	
+	@Column(name = "name")
 	private String name;
+	
+	/*@Column(name = "type")
+	private Type type;*/
 
-	private Type type;
-
+	@Column(name = "description")
 	private String description;
 
+	@Column(name = "units")
 	private int units;
 
+	@Column(name = "price")
 	private float price;
 
+	@Column(name = "images_location")
 	private String imagesLocation;
 
 	public Product() {
@@ -47,13 +53,13 @@ public class Product {
 		return name;
 	}
 
-	public Type getType() {
+	/*public Type getType() {
 		return type;
 	}
 
 	public void setType(Type type) {
 		this.type = type;
-	}
+	}*/
 
 	public void setName(String name) {
 		this.name = name;
@@ -93,7 +99,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + "type=" + type + ", description=" + description + ", units="
+		return "Product [id=" + id + ", name=" + name /*+ "type=" + type*/ + ", description=" + description + ", units="
 				+ units + ", price=" + price + ", imagesLocation=" + imagesLocation + "]";
 	}
 
