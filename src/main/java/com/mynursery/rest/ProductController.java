@@ -11,13 +11,13 @@ import com.mynursery.entity.Product;
 import com.mynursery.service.ProductService;
 
 @RestController
-@RequestMapping("/api/home")
-public class HomeController {
+@RequestMapping("/api")
+public class ProductController {
 	
 	@Autowired
 	ProductService productService;
 	
-	@GetMapping
+	@GetMapping("/products")
 	public List<Product> findAll(){
 		return productService.findAll();
 	}

@@ -6,13 +6,9 @@
 <body>
 	<h2>My Nursery</h2>
 	
-	<!-- TODO: configure home page here.
-	 for the time being redirecting to plants-->
-	<!--  <a href = "${pageContext.request.contextPath}/api/home">Home</a> -->
-	
-	<!-- Redirecting to the home api -->
+	<!-- Redirecting to the products api -->
 	<%
-		response.sendRedirect("api/home");
+		response.sendRedirect("api/products");
 	%>
 	
 </body>

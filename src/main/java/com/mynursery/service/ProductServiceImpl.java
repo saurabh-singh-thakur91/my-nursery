@@ -20,23 +20,4 @@ public class ProductServiceImpl implements ProductService {
 	public List<Product> findAll() {
 		return productDao.findAll();
 	}
-
-	@Override
-	@Transactional
-	public Product findById(int productId) {
-		return productDao.findById(productId);
-	}
-
-	@Override
-	@Transactional
-	public Product save(Product product) {
-		return productDao.save(product);
-	}
-
-	@Override
-	@Transactional
-	public void delete(int productId) {
-		productDao.delete(productId);
-	}
-
 }
