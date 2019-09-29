@@ -28,20 +28,27 @@ public class PlantController {
 
 	@GetMapping("/plants/{plantId}")
 	public Plant findById(@PathVariable int plantId) {
-		return null;
+		return plantService.findById(plantId);
 	}
 	
 	@PostMapping("/plants")
 	public Plant save(@RequestBody Plant plant) {
-		return null;
+		plant.setId(0);
+		return plantService.save(plant);
 	}
 	
 	@PutMapping("/plants/{plantId}")
 	public Plant update(@RequestBody Plant plant, @PathVariable int plantId) {
-		return null;
+		
+		if(plant.getId() == 0) {
+			plant.setId(plantId);
+		}
+		
+		return plantService.save(plant);
 	}
 	
 	@DeleteMapping("/plants/{plantId}")
-	public void delete(@PathVariable int plantId) {
+	public String delete(@PathVariable int plantId) {
+		return plantService.delete(plantId);
 	}
 }

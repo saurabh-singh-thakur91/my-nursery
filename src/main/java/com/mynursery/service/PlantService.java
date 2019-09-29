@@ -8,10 +8,10 @@ public interface PlantService {
 	
 	public List<Plant> findAll();
 	
-	public Plant findById();
+	public Plant findById(int plantId);
 	
-	public Plant save();
+	public Plant save(Plant plant);
 	
-	public String delete();
+	public String delete(int plantId);
 
 }

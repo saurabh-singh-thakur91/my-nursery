@@ -22,21 +22,21 @@ public class PlantServiceImpl implements PlantService {
 	}
 
 	@Override
-	public Plant findById() {
-		// TODO Auto-generated method stub
-		return null;
+	@Transactional
+	public Plant findById(int plantId) {
+		return plantDao.findById(plantId);
 	}
 
 	@Override
-	public Plant save() {
-		// TODO Auto-generated method stub
-		return null;
+	@Transactional
+	public Plant save(Plant plant) {
+		return plantDao.save(plant);
 	}
 
 	@Override
-	public String delete() {
-		// TODO Auto-generated method stub
-		return null;
+	@Transactional
+	public String delete(int plantId) {
+		return plantDao.delete(plantId);
 	}
 
 }
