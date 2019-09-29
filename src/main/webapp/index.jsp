@@ -8,6 +8,12 @@
 	
 	<!-- TODO: configure home page here.
 	 for the time being redirecting to plants-->
-	<a href = "api/plants">Home</a>
+	<!--  <a href = "${pageContext.request.contextPath}/api/home">Home</a> -->
+	
+	<!-- Redirecting to the home api -->
+	<%
+		response.sendRedirect("api/home");
+	%>
+	
 </body>
 </html>

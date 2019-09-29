@@ -22,9 +22,6 @@ public class Product {
 	
 	@Column(name = "name")
 	private String name;
-	
-	/*@Column(name = "type")
-	private Type type;*/
 
 	@Column(name = "description")
 	private String description;
@@ -99,7 +96,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name /*+ "type=" + type*/ + ", description=" + description + ", units="
+		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", units="
 				+ units + ", price=" + price + ", imagesLocation=" + imagesLocation + "]";
 	}
 
