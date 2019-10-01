@@ -16,28 +16,28 @@ import com.mynursery.entity.Plant;
 import com.mynursery.service.PlantService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/plants")
 public class PlantController {
 	@Autowired
 	PlantService plantService;
 	
-	@GetMapping("/plants")
+	@GetMapping
 	public List<Plant> findAll() {
 		return plantService.findAll();
 	}
 
-	@GetMapping("/plants/{plantId}")
+	@GetMapping("/{plantId}")
 	public Plant findById(@PathVariable int plantId) {
 		return plantService.findById(plantId);
 	}
 	
-	@PostMapping("/plants")
+	@PostMapping
 	public Plant save(@RequestBody Plant plant) {
 		plant.setId(0);
 		return plantService.save(plant);
 	}
 	
-	@PutMapping("/plants/{plantId}")
+	@PutMapping("/{plantId}")
 	public Plant update(@RequestBody Plant plant, @PathVariable int plantId) {
 		
 		if(plant.getId() == 0) {
@@ -47,7 +47,7 @@ public class PlantController {
 		return plantService.save(plant);
 	}
 	
-	@DeleteMapping("/plants/{plantId}")
+	@DeleteMapping("/{plantId}")
 	public String delete(@PathVariable int plantId) {
 		return plantService.delete(plantId);
 	}
