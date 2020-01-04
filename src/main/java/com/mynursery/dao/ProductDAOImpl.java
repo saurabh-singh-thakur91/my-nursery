@@ -21,7 +21,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<Product> findAll() {
 		/*
 		 * Session acquired by using .getCurrentSession() is automatically flushed when
-		 * the transactions gets over
+		 * the transaction gets over
 		 */
 
 		Session session = sessionFactory.getCurrentSession();
